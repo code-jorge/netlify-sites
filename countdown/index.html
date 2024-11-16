@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La cuenta atrás</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --scale: 1;
+      --width: calc(var(--scale) * 60px);
+      --height: calc(var(--scale) * 80px);
+      --font-size: calc(var(--scale) * 48px);
+      --separation: calc(var(--scale) * 10px);
+      --background: #222;
+      --color: #bbb;
+      --text-color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      :root { --scale: 0.7; }
+    }
+
+    html {
+      background-color: var(--background);
+      color: var(--text-color);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .clock {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    .section {
+      position: relative;
+    }
+
+    .label {
+      position: absolute;
+      top: calc(var(--scale) * -16px);
+      margin: 0;
+      text-transform: uppercase;
+      left: 6px;
+      font-size: calc(var(--scale) * 10px);
+      color: var(--color);
+    }
+
+    .digit {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      width: calc(var(--width) + calc(2 * var(--separation)));
+      height: calc(var(--height) + calc(2 * var(--separation)));
+      background-color: #444;
+      border-radius: 5px;
+      font-size: var(--font-size);
+      letter-spacing: 3px;
+      position: relative;
+      transform-style: preserve-3d;
+      overflow: hidden;
+      padding: var(--separation);
+    }
+
+    .digit span {
+      position: absolute;
+      display: block;
+      transform-origin: bottom;
+      height: var(--height);
+      width: var(--width);
+      top: var(--separation);
+      left: var(--separation);
+      line-height: var(--height);
+    }
+
+    .digit .new {
+      opacity: 0;
+    }
+
+    .digit .old.flip {
+      animation: flip-out 0.5s ease-in-out;
+    }
+
+    .digit .new.flip {
+      opacity: 1;
+      animation: flip-in 0.5s ease-in-out;
+    }
+
+    .divider {
+      font-size: var(--font-size);
+      margin: 0 var(--separation);
+    }
+
+    @keyframes flip-out {
+      from {
+        transform: rotateX(0);
+      }
+
+      to {
+        transform: rotateX(180deg);
+      }
+    }
+
+    @keyframes flip-in {
+      0% {
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 0;
+      }
+
+      70% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="section">
+      <p class="label">Días</p>
+      <div class="digit" id="days">
+        <span class="old">00</span>
+        <span class="new">00</span>
+      </div>
+    </div>
+    <div class="divider">:</div>
+    <div class="section">
+      <p class="label">Horas</p>
+      <div class="digit" id="hours">
+        <span class="old">00</span>
+        <span class="new">00</span>
+      </div>
+    </div>
+    <div class="divider">:</div>
+    <div class="section">
+      <p class="label">Minutos</p>
+      <div class="digit" id="minutes">
+        <span class="old">00</span>
+        <span class="new">00</span>
+      </div>
+    </div>
+    <div class="divider">:</div>
+    <div class="section">
+      <p class="label">Segundos</p>
+      <div class="digit" id="seconds">
+        <span class="old">00</span>
+        <span class="new">00</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    // Set the date we're counting down to
+    const referenceDate = ""
+
+    const countdownDate = new Date(referenceDate).getTime()
+
+    // Update the countdown every second
+    const timer = setInterval(function () {
+      const now = new Date().getTime()
+      const distance = countdownDate - now
+
+      // Calculations for days, hours, minutes, and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+      // Update the display of the countdown digits
+      updateClockDigit("days", formatTime(days))
+      updateClockDigit("hours", formatTime(hours))
+      updateClockDigit("minutes", formatTime(minutes))
+      updateClockDigit("seconds", formatTime(seconds))
+
+      // If the countdown is over, display a message
+      if (distance < 0) clearInterval(timer)
+    }, 1000)
+
+    // Function to format time digits (add leading zero if needed)
+    const formatTime = (time)=> {
+      if (time < 0) return "00"
+      if (time < 10) return `0${time}`
+      return `${time}`
+    }
+
+    // Function to update clock digit with animation
+    const updateClockDigit = (id, newValue)=> {
+      const digit = document.getElementById(id)
+      const oldDigit = digit.querySelector(".old")
+      const newDigit = digit.querySelector(".new")
+      const oldValue = oldDigit.innerText
+      if (oldValue.toString() !== newValue.toString()) {
+        newDigit.innerText = newValue
+        newDigit.classList.add("flip")
+        oldDigit.classList.add("flip")
+        setTimeout(() => {
+          oldDigit.innerText = newValue
+          newDigit.classList.remove("flip")
+          oldDigit.classList.remove("flip")
+        }, 400)
+      }
+    }
+  </script>
+</body>
+
+</html>

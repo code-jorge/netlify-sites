@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡</title>
+</head>
+
+<body>
+  <style>
+    html {
+      background-color: black;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0 20px;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 60px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 220px;
+    }
+
+    button {
+      padding: 15px 20px;
+      background-color: #ff5733;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:hover {
+      background-color: #d14500;
+    }
+
+    button::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.6s ease;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    button:hover::before {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+
+    @media(max-width: 600px) {
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        margin: 0 0 20px 0;
+      }
+    }
+  </style>
+  <header>
+    <h1>The revolution is coming</h1>
+    <p>Join the waitlist!</p>
+  </header>
+  <main>
+    <form name="subscribe" netlify>
+      <input required type="email" id="email" name="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </main>
+</body>
+</html>
