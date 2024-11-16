@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The sleepy cat</title>
+    <title>The sleepy cats</title>
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        img {
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .expanded {
-            transform: scale(1.5);
-        }
-    </style>
-</head>
-<body>
-    <img id="img" src="/.netlify/images?url=/sleepy-cat.webp&w=100" alt="Peaceful cat resting">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <figure id="figure">
+      <img 
+        id="img" 
+        src="/.netlify/images?url=/sleepy-cats.webp&w=250" 
+        alt="Peaceful cats resting"
+        data-size="small"
+      >
+      <figcaption id="caption"></figcaption>
+    </figure>
+    <aside aria-label="Toolbar">
+      <button id="select" data-cat="both"></button>
+    </aside>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
-

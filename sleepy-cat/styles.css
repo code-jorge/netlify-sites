@@ -1,0 +1,60 @@
+html {
+  background-color: #121212;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+img {
+  cursor: pointer;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 6px;
+  max-width: calc(100% - 40px);
+  max-height: calc(100vh - 120px);
+}
+
+figcaption {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+}
+
+aside {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid white;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+button[data-cat="both"] {
+  background: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%);
+}
+
+button[data-cat="white"] {
+  background: #fff
+}
+
+button[data-cat="black"] {
+  background: #fff
+}
