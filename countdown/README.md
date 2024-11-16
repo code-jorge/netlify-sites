@@ -12,3 +12,7 @@ network response with the target date.
 This way, by simply updating the `TARGET_DATE` environment variable, 
 the countdown will be updated to the new target date. No need to
 redeploy the site.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/code-jorge/netlify-sites&base=countdown#TARGET_DATE)
+
+

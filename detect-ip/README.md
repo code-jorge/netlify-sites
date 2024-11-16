@@ -7,3 +7,5 @@ and add the IP address to the body of the HTML response.
 
 The IP address, as well as location information, is available in the `request` object
 passed to the edge function.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/code-jorge/netlify-sites&base=detect-ip)

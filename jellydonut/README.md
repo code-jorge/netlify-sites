@@ -17,3 +17,5 @@ A great example of the usage of `CSS Custom Properties` in a site.
 - Moving the mouse (or interacting via a touch screen) will update the `--x` and `--y` variables, which will in turn update the position of rainbow behind it
 
 - Clicking on the screen will update the `--image-size` variable, which will in turn update the size of the Jellydonut
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/code-jorge/netlify-sites&base=jellydonut)
