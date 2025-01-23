@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at center, #b29f93 0%,#705f54 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 1rem;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #f8d608;
+  opacity: .7;
+}
+
+a {
+	background: 
+    linear-gradient(to top, #fff 0%,rgba(255,255,255,0.1) 3%),
+    linear-gradient(to bottom, #e9e4e0 0%,rgba(255,255,255,0.1) 3%), 
+    linear-gradient(to top, #e5e0d8 0%,#f9f6f1 100%);
+	width: 100px;
+	height: 100px;
+	display: block;
+	border-radius: 10px;
+	margin:0px auto;
+	box-shadow: 0px -3px 0px #d2cdc4, 0px 0px 0px 4px #777069, 0px -2px 0px 4px #777069, 0px 0px 0px 10px #f9f6f2, 0px -2px 0px 10px #f9f6f2, 0px 0px 0px 11px #f0ebe7, 0px -2px 0px 11px #f0ebe7, 0px 0px 0px 20px #f9f6f2, 0px 4px 1px 20px #e4e1dc, 0px -4px 0px 20px #fdfcfb, 0px 4px 20px 20px #000;
+	margin-top: 50px;
+}
+
+a:after {
+	content: '';
+	width: 25px;
+	height: 8px;
+	margin: 15px 37px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.4) inset, 0px 1px 0px #fff;
+	border-radius: 15px;
+	background: #f8d608;
+	position: absolute;
+}
+
+a:active {
+	background: 
+    linear-gradient(to bottom, #e9e4e0 0%,rgba(255,255,255,0.1) 3%), 
+    linear-gradient(to top, #e5e0d8 0%,#f9f6f1 100%);
+	box-shadow: 0px -4px 0px #d2cdc4 inset, 0px -3px 0px #e5e0d8, 0px 0px 0px 4px #777069, 0px -2px 0px 4px #777069, 0px 0px 0px 10px #f9f6f2, 0px -2px 0px 10px #f9f6f2, 0px 0px 0px 11px #f0ebe7, 0px -2px 0px 11px #f0ebe7, 0px 0px 0px 20px #f9f6f2, 0px 4px 1px 20px #e4e1dc, 0px -4px 0px 20px #fdfcfb, 0px 4px 20px 20px #000;
+}
+
+a:active:after {
+  margin: 13px 37px;
+}

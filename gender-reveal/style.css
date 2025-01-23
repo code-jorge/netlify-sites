@@ -1,0 +1,169 @@
+#start,
+#countdown,
+#result {
+  display: none;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body[data-stage="1"] #start {
+  display: flex;
+}
+
+body[data-stage="2"] #countdown {
+  display: flex;
+}
+
+body[data-stage="3"] #result {
+  display: flex;
+}
+
+#button {
+  background-color: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+  border: none;
+  padding: 30px 20px;
+  user-select: none;
+}
+
+#count {
+  font-size: 8rem;
+  animation: pulse 10s ;
+}
+
+#result {
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(to right, var(--color) 0%, var(--color) 50%, #ffffff 50%, #ffffff 100%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  animation: fillBackground 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#result::after {
+  content: var(--text);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.25);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.25);
+  }
+  20% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.25);
+  }
+  30% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.25);
+  }
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.25);
+  }
+  50% {
+    transform: scale(1);
+  }
+  52.5% {
+    transform: scale(1.25);
+  }
+  55% {
+    transform: scale(1);
+  }
+  57.5% {
+    transform: scale(1.25);
+  }
+  60% {
+    transform: scale(1);
+  }
+  62.5% {
+    transform: scale(1.25);
+  }
+  65% {
+    transform: scale(1);
+  }
+  67.5% {
+    transform: scale(1.25);
+  }
+  70% {
+    transform: scale(1);
+  }
+  72.5% {
+    transform: scale(1.25);
+  }
+  75% {
+    transform: scale(1);
+  }
+  77.5% {
+    transform: scale(1.25);
+  }
+  80% {
+    transform: scale(1);
+  }
+  82.5% {
+    transform: scale(1.25);
+  }
+  85% {
+    transform: scale(1);
+  }
+  87.5% {
+    transform: scale(1.25);
+  }
+  90% {
+    transform: scale(1);
+  }
+  92.5% {
+    transform: scale(1.25);
+  }
+  95% {
+    transform: scale(1);
+  }
+  97.5% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fillBackground {
+  0% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

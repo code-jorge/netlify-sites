@@ -1,6 +1,6 @@
 ## Netlify Identity
 
-Design to test the **Netlify Identity** integration.
+Designed to test the **Netlify Identity** integration.
 
 If you deploy this site to Netlify, you must enable the Identity feature
 and configure it accordingly.

@@ -1,6 +1,6 @@
 ## sleepy-cat
 
-It's just an adorable cat sleeping in a japanese Torii gate.
+It's just an adorable couple of cats sleeping next to each other.
 
 Image optimization is heavy on this one, we are using the power 
 of **Netlify Images** to optimize the image depending on the situation.
