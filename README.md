@@ -5,13 +5,13 @@
 Over the past few years I've built a series of small sites to test out concepts, or to just play around.
 Instead of having each in it's own repo, I've decided to put them all here.
 
-| Site                                    | Description                  | Features                                     |
-| --------------------------------------- | ---------------------------- | -------------------------------------------- |
-| [gender-reveal](./gender-reveal/)       | Baby gender reveal           | --                                           |
-| [infinite-tabs](./infinite-tabs/)       | Opens infinite tabs          | --                                           |
-| [jellydonut](./jellydonut/)             | A jellydonut floating        | --                                           |
-| [nuck-chorris](./nuck-chorris/)         | Nuck Chorris, the legend     | --                                           |
-| [tensorflow-intro](./tensorflow-intro/) | Detect objects in the video  | --                                           |
+| Site                                    | Description                  |
+| --------------------------------------- | ---------------------------- |
+| [gender-reveal](./gender-reveal/)       | Baby gender reveal           |
+| [infinite-tabs](./infinite-tabs/)       | Opens infinite tabs          |
+| [jellydonut](./jellydonut/)             | A jellydonut floating        |
+| [nuck-chorris](./nuck-chorris/)         | Nuck Chorris, the legend     |
+| [tensorflow-intro](./tensorflow-intro/) | Detect objects in the video  |
 
 
 ### Netlify sites
