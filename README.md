@@ -31,6 +31,7 @@ These sites use specific **Netlify** features.
 
 These sites are **Netlify extensions** that can be installed in your team to add more value to your sites / team.
 
-| Site                                                | Description                  |
-| --------------------------------------------------- | ---------------------------- |
-| [extension-maintenance](./extension-maintenance/)   | Allows maintenance mode      |
+| Site                                                | Description                        |
+| --------------------------------------------------- | ---------------------------------- |
+| [extension-maintenance](./extension-maintenance/)   | Allows maintenance mode            |
+| [extension-tile-flip](./extension-tile-flip/)       | Play "Tile flip" while builds run  |

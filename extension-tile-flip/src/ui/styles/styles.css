@@ -1,0 +1,53 @@
+.tw-rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.tw-perspective-1000 {
+  perspective: 1000px;
+}
+
+.tw-duration-700 {
+  transition-duration: 700ms;
+}
+
+.tw-duration-350 {
+  transition-duration: 350ms;
+}
+
+.tw-backface-hidden {
+  backface-visibility: hidden;
+}
+
+.tw-transform-3d {
+  transform-style: preserve-3d;
+}
+
+.tw-meter {
+  meter::-webkit-meter-bar {
+    @apply tw-h-[1em]
+      tw-rounded-none
+      tw-border-0
+      tw-bg-transparent
+      tw-bg-none;
+  }
+
+  meter::-webkit-meter-optimum-value {
+    @apply tw-rounded-sm
+      tw-rounded-bl-none
+      tw-bg-current
+      tw-bg-none
+      tw-transition-all
+      tw-duration-150
+      tw-ease-ease;
+  }
+
+  meter:-moz-meter-optimum::-moz-meter-bar {
+    @apply tw-rounded-sm
+      tw-rounded-bl-none
+      tw-bg-current
+      tw-bg-none
+      tw-transition-all
+      tw-duration-150
+      tw-ease-ease;
+  }
+}

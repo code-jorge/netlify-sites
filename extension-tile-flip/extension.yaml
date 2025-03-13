@@ -1,0 +1,10 @@
+config:
+  slug: tile-flip
+  name: tile-flip
+  scopes:
+    site: ["read", "write"]
+    ui: ["read", "write"]
+  use_cjs_shims: false
+  ui:
+    surfaces:
+      - extension-site-build-game
