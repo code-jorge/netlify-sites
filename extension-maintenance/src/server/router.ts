@@ -29,13 +29,9 @@ export const appRouter = router({
           } else {
             await client.createSiteConfiguration(teamId, siteId, newConfig);
           }
-          await client.createOrUpdateVariables({
-            accountId: teamId,
-            siteId,
-            variables: {
-              MAINTENANCE_ENABLED: JSON.stringify({ enabled: newConfig.enabled, reason: newConfig.reason }) || '{}',
-            },
-          });
+          const blobStore = await client.getBlobStore(siteId, 'maintenance');
+          blobStore.set('status', newConfig.enabled ? 'enabled' : 'disabled');
+          blobStore.set('message', newConfig.reason);
         } catch (e) {
           throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to update site settings", cause: e });
         }

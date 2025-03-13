@@ -1,25 +1,20 @@
-// Documentation: https://sdk.netlify.com/docs
-
 import type { Config, Context } from "@netlify/edge-functions";
+import { getStore } from '@netlify/blobs';
 import generateTemplate from "./template.js";
 
 const handler = async (request: Request, context: Context) => {
-  const maintenance = Netlify.env.get("MAINTENANCE_ENABLED");
-  // If the env var isn't there, continue
-  if (!maintenance) return await context.next();
-  try {
-    const { enabled, reason } = JSON.parse(maintenance);
-    // If maintenance mode isn't enabled, continue
-    if (!enabled) return await context.next();
-    // Return the maintenance template
-    return new Response(generateTemplate(reason), {
-      headers: { "content-type": "text/html" },
-    })
-  }
-  catch (error) {
-    const response = await context.next();
-    return response;
-  }
+  // Get the Blob store
+  const store = getStore('maintenance');
+  if (!store) return await context.next();
+  // If maintenance mode is not enabled return
+  const status = await store.get('status');
+  if (status !== 'enabled') return await context.next();
+  // Get the maintenance message
+  const reason = await store.get('message');
+  // Return the maintenance template
+  return new Response(generateTemplate(reason), {
+    headers: { "content-type": "text/html" },
+  })
 }
 
 export default handler;
