@@ -1,6 +1,6 @@
 config:
-  slug: tile-flip
-  name: tile-flip
+  slug: tile-flip-game
+  name: tile-flip-game
   scopes:
     site: ["read", "write"]
     ui: ["read", "write"]
