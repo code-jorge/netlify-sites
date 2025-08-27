@@ -8,7 +8,10 @@ It uses:
 - **Scheduled Functions**: The `fetch-members` function is scheduled to run hourly (see `netlify.toml`).
 - **Blob Storage**: Uses Netlify Blobs to persist daily member snapshots to `members/snapshots.json`.
 
-- Setting up `NETLIFY_API_TOKEN` with an access token for Netlify
+
+It requires: 
+
+- Setting up `NETLIFY_API_TOKEN` with an access token for Netlify, you can create one in your [Netlify user settings](https://app.netlify.com/user/applications#personal-access-tokens).
 
 ---
 
