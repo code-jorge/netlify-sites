@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  functions = "netlify/functions"
+
+[functions]
+  directory = "netlify/functions"
+
+
+[functions."fetch-members"]
+  schedule = "@hourly"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[template.environment]
+  NETLIFY_API_TOKEN = "set a personal access token to fetch data from Netlify"
