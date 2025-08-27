@@ -16,6 +16,3 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-
-[template.environment]
-  NETLIFY_API_TOKEN = "set a personal access token to fetch data from Netlify"
