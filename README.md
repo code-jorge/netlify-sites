@@ -21,15 +21,16 @@ Instead of having each in it's own repo, I've decided to put them all here.
 
 These sites use specific **Netlify** features.
 
-| Site                                      | Description                  | Features                                    |
-| ----------------------------------------- | ---------------------------- | ------------------------------------------- |
-| [countdown](./countdown/)                | Creates a countdown timer    | `Environment Variables` and `Edge Functions` |
-| [detect-ip](./detect-ip/)                | Detects IP addresses         | `Edge Functions`                             |
-| [identity](./identity/)                  | Login page                   | `Netlify Identity`                           |
-| [members-tracking](./members-tracking/)  | Track members in team        | `Netlify Blobs` | `Scheduled Functions`      |
-| [mfa-auth](./mfa-auth/)                  | 2FA Explained                | `Functions`                                  |
-| [sleepy-cat](./sleepy-cat/)              | Sleeping cats                | `Netlify Images`                             |
-| [subscribe](./subscribe/)                | Subscribe from               | `Netlify Forms`                              |
+| Site                                  | Description           | Features                                                                |
+| ------------------------------------- | --------------------- | ----------------------------------------------------------------------- |
+| [countdown](./countdown/)             | Creates a countdown   | `Environment Variables` & `Edge Functions`                              |
+| [detect-ip](./detect-ip/)             | Detects IP addresses  | `Edge Functions`                                                        |
+| [identity](./identity/)               | Login page            | `Identity`                                                              |
+| [member-tracking](./member-tracking/) | Track members in team | `Blobs` & `Scheduled Functions`                                         |
+| [mfa-auth](./mfa-auth/)               | 2FA Explained         | `Functions`                                                             |
+| [sleepy-cat](./sleepy-cat/)           | Sleeping cats         | `Images`                                                                |
+| [subscribe](./subscribe/)             | Subscribe from        | `Forms`                                                                 |
+| [daily-facts](./daily-facts/)         | Daily facts with AI   | `Forms`, `Images`, `Functions`, `Edge Functions`, `Blobs`, `AI Gateway` |
 
 ### Netlify extensions
 
