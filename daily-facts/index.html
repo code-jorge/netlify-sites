@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netlify Features Showcase</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+  </head>
+  <body>
+    <!-- Hidden form for Netlify Forms detection (must mirror the React form) -->
+    <form name="subscribe" netlify netlify-honeypot="bot-field" hidden>
+      <input name="form-name" type="hidden" value="subscribe" />
+      <input name="bot-field" />
+      <input name="email" type="email" />
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
