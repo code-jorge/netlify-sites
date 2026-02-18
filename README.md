@@ -27,6 +27,7 @@ These sites use specific **Netlify** features.
 | [detect-ip](./detect-ip/)             | Detects IP addresses  | `Edge Functions`                                                        |
 | [identity](./identity/)               | Login page            | `Identity`                                                              |
 | [member-tracking](./member-tracking/) | Track members in team | `Blobs` & `Scheduled Functions`                                         |
+| [deploy-manager](./deploy-manager/)   | Manage deploys        | `Environment Variables` & `Access Tokens`                               |
 | [mfa-auth](./mfa-auth/)               | 2FA Explained         | `Functions`                                                             |
 | [sleepy-cat](./sleepy-cat/)           | Sleeping cats         | `Images`                                                                |
 | [subscribe](./subscribe/)             | Subscribe from        | `Forms`                                                                 |
