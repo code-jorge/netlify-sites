@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Irrelephant</title>
+  <meta name="description" content="Here is what I think of your idea. Open the curtain to see an elephant yeet it into orbit, again and again." />
+  <meta property="og:site_name" content="Irrelephant" />
+  <meta property="og:title" content="Irrelephant" />
+  <meta property="og:description" content="Here is what I think of your idea. Open the curtain to see an elephant yeet it into orbit, again and again." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text x='50' y='74' font-size='72' font-family='Impact,sans-serif' fill='white' text-anchor='middle'>I</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- The reveal: the stage behind the curtains -->
+  <main class="stage" id="stage" inert>
+    <h1 class="title" id="title" tabindex="-1">Irrelephant</h1>
+
+    <svg class="elephant" viewBox="0 0 800 480" role="img" aria-labelledby="elephant-title">
+      <title id="elephant-title">An elephant swinging its trunk and yeeting a light bulb idea off into the distance, on repeat</title>
+      <defs>
+        <!-- The idea: a light bulb centred on 0,0, drawn as line art -->
+        <g id="bulb" fill="#fff" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M0 -38 v-8 M27 -27 l6 -6 M-27 -27 l-6 -6" fill="none" />
+          <path d="M0 -28 C16 -28 26 -16 26 -2 C26 10 16 14 12 22 h-24 C-16 14 -26 10 -26 -2 C-26 -16 -16 -28 0 -28z" />
+          <path d="M-7 18 v-12 l-5 -8 M7 18 v-12 l5 -8 M-12 -2 q4 -6 6 0 q3 6 6 0 q3 -6 6 0 q3 6 6 0" fill="none" stroke-width="2" />
+          <path d="M-12 22 h24 v6 q0 4 -4 4 h-16 q-4 0 -4 -4z" />
+          <path d="M-12 27 h24" fill="none" stroke-width="2" />
+          <path d="M-6 32 q6 7 12 0" fill="none" />
+        </g>
+      </defs>
+
+      <!-- ground -->
+      <g fill="none" stroke="#000" stroke-width="3" stroke-linecap="round">
+        <path d="M40 436 H770" />
+        <path d="M120 448 h40 M300 450 h70 M520 447 h30 M640 450 h50" stroke-width="2" />
+      </g>
+
+      <g class="elephant-body" fill="#fff" stroke="#000" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+        <!-- far legs -->
+        <path d="M232 300 C230 360 246 398 240 428 Q262 434 286 428 C282 396 290 350 296 300z" />
+        <path d="M362 300 C362 360 368 398 364 428 Q386 434 410 428 C404 396 410 350 410 300z" />
+
+        <!-- tail -->
+        <g transform="translate(158 262)">
+          <g class="tail" fill="none">
+            <path d="M0 0 C-14 24 -16 52 -12 78" />
+            <path d="M-12 74 l-7 16 M-12 74 l-1 18 M-12 74 l6 16" stroke-width="2.5" />
+          </g>
+        </g>
+
+        <!-- body -->
+        <path d="M156 296 C146 226 196 172 282 160 C342 152 388 132 432 146 C450 200 452 260 446 316 C420 350 320 360 236 346 C190 340 160 326 156 296z" />
+        <g fill="none" stroke-width="2.5">
+          <path d="M186 214 C178 240 178 268 186 292" />
+          <path d="M300 344 c10 -8 26 -8 36 0 M362 340 c8 -6 20 -6 28 0" />
+          <path d="M400 170 c10 30 12 60 6 92" />
+        </g>
+
+        <!-- near legs -->
+        <g stroke="none">
+          <path d="M186 288 C182 360 202 400 192 432 Q220 440 250 432 C242 398 256 340 266 300z" />
+          <path d="M398 290 C398 360 404 400 398 432 Q424 440 454 432 C448 398 454 350 456 290z" />
+        </g>
+        <g fill="none">
+          <path d="M186 288 C182 360 202 400 192 432 Q220 440 250 432 C242 398 256 340 266 300" />
+          <path d="M398 290 C398 360 404 400 398 432 Q424 440 454 432 C448 398 454 350 456 290" />
+        </g>
+        <g fill="none" stroke-width="2.5">
+          <path d="M198 368 q20 6 44 -2 M200 380 q18 5 40 -1" />
+          <path d="M402 366 q22 6 50 -2 M402 378 q22 5 48 -1" />
+          <path d="M204 432 q6 -9 12 0 M220 433 q6 -9 12 0 M236 432 q5 -8 10 0" />
+          <path d="M410 432 q6 -9 12 0 M426 433 q6 -9 12 0 M442 432 q5 -8 10 0" />
+        </g>
+
+        <!-- trunk: pivots at its base in the head -->
+        <g transform="translate(520 262)">
+          <g class="trunk" id="trunk">
+            <path d="M-22 -24 C-2 30 -12 92 -2 136 Q6 166 38 164 Q54 162 58 148 Q46 152 38 148 Q28 142 30 126 C28 92 44 40 24 -24z" />
+            <g fill="none" stroke-width="2.5">
+              <path d="M-6 40 q16 6 32 0 M-7 62 q16 6 30 0 M-7 84 q15 6 28 0 M-5 104 q14 6 26 0 M0 122 q12 5 24 0" />
+            </g>
+            <!-- the idea, held at the tip -->
+            <g transform="translate(64 136) rotate(40)">
+              <g class="held"><use href="#bulb" /></g>
+            </g>
+          </g>
+        </g>
+
+        <!-- head -->
+        <path d="M412 156 C436 118 500 108 538 132 C566 152 572 204 562 240 C556 264 540 280 518 278 C500 296 472 304 452 292 C434 280 420 240 412 156z" />
+        <path d="M486 124 c14 -6 30 -4 40 4" fill="none" stroke-width="2.5" />
+
+        <!-- tusk -->
+        <path d="M528 266 C552 296 590 300 616 276 C590 286 562 280 544 256z" />
+
+        <!-- ear: flaps around its attachment to the head -->
+        <g transform="translate(452 214)">
+          <g class="ear">
+            <path d="M0 -72 C-60 -98 -132 -64 -130 6 C-128 56 -104 86 -74 94 C-54 100 -42 116 -32 132 C-22 110 -10 90 0 72 C14 30 14 -30 0 -72z" />
+            <path d="M-12 -52 C-70 -70 -112 -34 -108 12 C-104 48 -84 68 -60 76 M-56 -20 c-14 20 -16 44 -6 64" fill="none" stroke-width="2.5" />
+          </g>
+        </g>
+
+        <!-- smug face -->
+        <path d="M508 204 q10 -8 20 0 q-10 6 -20 0z" />
+        <circle cx="520" cy="204" r="3.5" fill="#000" stroke="none" />
+        <path d="M504 200 q14 -10 28 -2" fill="none" />
+        <path d="M500 186 q16 -10 34 -6" fill="none" stroke-width="2.5" />
+        <path d="M536 220 q8 6 6 16 M540 244 q6 4 4 10" fill="none" stroke-width="2.5" />
+      </g>
+
+      <!-- whoosh lines at the moment of release -->
+      <!-- arcs follow the path the trunk tip swept just before letting go -->
+      <g class="whoosh" fill="none" stroke="#000" stroke-linecap="round">
+        <path d="M564.5 428.1 A172 172 0 0 0 669 348" stroke-width="3" />
+        <path d="M558.8 406.9 A150 150 0 0 0 649.9 337" stroke-width="4" />
+        <path d="M553.1 385.6 A128 128 0 0 0 630.9 326" stroke-width="3" />
+      </g>
+
+      <text class="yeet" x="610" y="96" text-anchor="middle">YEET!</text>
+
+      <!-- the idea, in flight: positioned every frame by the physics sim in the script -->
+      <g class="flyer" id="flyer" opacity="0"><use href="#bulb" /></g>
+    </svg>
+  </main>
+
+  <!-- The curtains (black & white) -->
+  <div class="curtains" id="curtains">
+    <div class="valance"></div>
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+
+    <section class="intro" id="intro">
+      <p class="intro-text">Here is what I think<br /><em>of your idea</em></p>
+      <button class="btn" id="open" type="button">
+        See for yourself
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 2.5v3M2.5 9h3M4.4 4.4l2.1 2.1M13.6 4.4l-2.1 2.1M4.4 13.6l2.1-2.1" />
+          <path d="M10 10l10.5 4-4.6 1.6 3.6 3.6-1.9 1.9-3.6-3.6L12.4 22z" />
+        </svg>
+      </button>
+    </section>
+  </div>
+
+  <script>
+    const body = document.body;
+    const stage = document.getElementById('stage');
+    const openBtn = document.getElementById('open');
+
+    openBtn.addEventListener('click', () => {
+      body.classList.add('is-open');
+      stage.inert = false;
+      document.getElementById('intro').inert = true;
+      setTimeout(() => document.getElementById('title').focus({ preventScroll: true }), 1400);
+    }, { once: true });
+
+    // ---------- The yeet: trunk swing + projectile physics ----------
+    // Everything runs in "nominal" seconds of a 3.2s loop, so the reduced-motion
+    // cycle simply plays the same throw back slower.
+    const NOMINAL = 3.2;
+    const RELEASE = 0.42;                          // fraction of the cycle where the trunk lets go
+    const DEG = Math.PI / 180;
+    const PIVOT = [520, 262];                      // trunk base in the SVG
+    const GRIP = [64, 136];                        // held bulb offset from the pivot
+    const GRIP_ROT = 40;                           // held bulb's own rotation
+    const ARM = Math.hypot(GRIP[0], GRIP[1]);
+    const GRIP_ANGLE = Math.atan2(GRIP[1], GRIP[0]) / DEG;
+
+    // Trunk angle over one cycle (degrees), in four beats:
+    //   1. rest, trunk down, while a fresh bulb pops in (CSS `held`, 0-12%)
+    //   2. wind back, then swing forward, accelerating (ease-in) into the release
+    //   3. release at 42%; follow-through starts at that same angular speed (ease-out)
+    //   4. brief hang at the top, then the trunk lowers back down and rests
+    const REST_END = 0.12, WIND = 12, SWING_START = 0.31, RELEASE_ANGLE = -40, FOLLOW = -118;
+    const HANG_END = 0.62, DOWN_AT = 0.86;
+    const OMEGA = 2 * (RELEASE_ANGLE - WIND) / (RELEASE - SWING_START);  // deg per cycle at release
+    const FOLLOW_END = RELEASE + 2 * (FOLLOW - RELEASE_ANGLE) / OMEGA;
+    const easeInOut = (u) => 0.5 - 0.5 * Math.cos(Math.PI * u);
+
+    function trunkAngle(p) {
+      if (p < REST_END) return 0;
+      if (p < SWING_START) return WIND * easeInOut((p - REST_END) / (SWING_START - REST_END));
+      if (p < RELEASE) {
+        const u = (p - SWING_START) / (RELEASE - SWING_START);
+        return WIND + (RELEASE_ANGLE - WIND) * u * u;
+      }
+      if (p < FOLLOW_END) {
+        const u = (p - RELEASE) / (FOLLOW_END - RELEASE);
+        return RELEASE_ANGLE + (FOLLOW - RELEASE_ANGLE) * (1 - (1 - u) * (1 - u));
+      }
+      if (p < HANG_END) return FOLLOW;
+      if (p < DOWN_AT) return FOLLOW * (1 - easeInOut((p - HANG_END) / (DOWN_AT - HANG_END)));
+      return 0;
+    }
+
+    // Integrate the flight once: the bulb leaves the trunk tip with the tip's
+    // tangential velocity and the trunk's spin, then gravity, quadratic air drag
+    // and a lossy bounce off the stage floor take over.
+    const GRAVITY = 900;      // px/s²
+    const DRAG = 0.0006;      // quadratic drag coefficient, 1/px
+    const SPIN_DRAG = 0.4;    // 1/s
+    const FLOOR = 404;        // floor line minus the bulb's radius
+    const RESTITUTION = 0.5;
+    const FRICTION = 0.75;
+    const DT = 1 / 240;
+
+    const flight = (() => {
+      const a = (GRIP_ANGLE + RELEASE_ANGLE) * DEG;
+      const w = (OMEGA / NOMINAL) * DEG;           // rad/s, negative = counter-clockwise
+      let x = PIVOT[0] + ARM * Math.cos(a);
+      let y = PIVOT[1] + ARM * Math.sin(a);
+      let vx = -w * ARM * Math.sin(a);
+      let vy = w * ARM * Math.cos(a);
+      let rot = GRIP_ROT + RELEASE_ANGLE;
+      let spin = OMEGA / NOMINAL;                  // deg/s
+      const steps = Math.ceil(((1 - RELEASE) * NOMINAL) / DT) + 1;
+      const path = new Float32Array(steps * 3);
+      for (let i = 0; i < steps; i++) {
+        path.set([x, y, rot], i * 3);
+        const speed = Math.hypot(vx, vy);
+        vx += -DRAG * speed * vx * DT;
+        vy += (GRAVITY - DRAG * speed * vy) * DT;
+        x += vx * DT;
+        y += vy * DT;
+        spin *= Math.exp(-SPIN_DRAG * DT);
+        rot += spin * DT;
+        if (y > FLOOR && vy > 0) {
+          y = FLOOR;
+          vy *= -RESTITUTION;
+          vx *= FRICTION;
+          spin = (vx / 30) / DEG;                  // roll with the floor
+        }
+      }
+      return path;
+    })();
+
+    function flyerAt(t) {
+      const f = Math.min(t / DT, flight.length / 3 - 1.001);
+      const i = Math.floor(f), k = f - i, o = i * 3;
+      return [0, 1, 2].map((n) => flight[o + n] + (flight[o + 3 + n] - flight[o + n]) * k);
+    }
+
+    // Stay in lockstep with the CSS-driven parts (ears, squash, held bulb, YEET!).
+    const trunk = document.getElementById('trunk');
+    const flyer = document.getElementById('flyer');
+    const clock = document.querySelector('.ear').getAnimations()[0];
+
+    function frame(now) {
+      const cycle = clock ? clock.effect.getTiming().duration : NOMINAL * 1000;
+      const p = (((clock && clock.currentTime) ?? now) % cycle) / cycle;
+      trunk.setAttribute('transform', `rotate(${trunkAngle(p).toFixed(2)})`);
+      if (p >= RELEASE) {
+        const [x, y, r] = flyerAt((p - RELEASE) * NOMINAL);
+        flyer.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${r.toFixed(1)})`);
+        flyer.setAttribute('opacity', p < 0.97 ? 1 : 0);
+      } else {
+        flyer.setAttribute('opacity', 0);
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  </script>
+</body>
+</html>

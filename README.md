@@ -11,6 +11,7 @@ Instead of having each in it's own repo, I've decided to put them all here.
 | --------------------------------------- | ---------------------------- |
 | [gender-reveal](./gender-reveal/)       | Baby gender reveal           |
 | [infinite-tabs](./infinite-tabs/)       | Opens infinite tabs          |
+| [irrelephant](./irrelephant/)           | An elephant yeets your idea  |
 | [jellydonut](./jellydonut/)             | A jellydonut floating        |
 | [nuck-chorris](./nuck-chorris/)         | Nuck Chorris, the legend     |
 | [tensorflow-intro](./tensorflow-intro/) | Detect objects in the video  |
