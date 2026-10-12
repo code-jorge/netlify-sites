@@ -1,0 +1,58 @@
+{
+  "en": {
+    "controls": "Controls",
+    "hintDrag": "Drag to rotate view.",
+    "hintShift": "Shift + <key> for reverse.",
+    "upper": "Upper",
+    "down": "Down",
+    "left": "Left",
+    "right": "Right",
+    "front": "Front",
+    "back": "Back",
+    "shuffle": "Shuffle",
+    "reset": "Reset",
+    "resetCamera": "Reset Camera"
+  },
+  "es": {
+    "controls": "Controles",
+    "hintDrag": "Arrastra para rotar.",
+    "hintShift": "Shift + <tecla> para invertir.",
+    "upper": "Arriba",
+    "down": "Abajo",
+    "left": "Izquierda",
+    "right": "Derecha",
+    "front": "Frente",
+    "back": "Atrás",
+    "shuffle": "Mezclar",
+    "reset": "Reiniciar",
+    "resetCamera": "Reiniciar Cámara"
+  },
+  "fr": {
+    "controls": "Commandes",
+    "hintDrag": "Glisser pour tourner.",
+    "hintShift": "Shift + <touche> pour inverser.",
+    "upper": "Haut",
+    "down": "Bas",
+    "left": "Gauche",
+    "right": "Droite",
+    "front": "Avant",
+    "back": "Arrière",
+    "shuffle": "Mélanger",
+    "reset": "Réinitialiser",
+    "resetCamera": "Réinit. Caméra"
+  },
+  "de": {
+    "controls": "Steuerung",
+    "hintDrag": "Ziehen zum Drehen.",
+    "hintShift": "Shift + <Taste> für Umkehrung.",
+    "upper": "Oben",
+    "down": "Unten",
+    "left": "Links",
+    "right": "Rechts",
+    "front": "Vorne",
+    "back": "Hinten",
+    "shuffle": "Mischen",
+    "reset": "Zurücksetzen",
+    "resetCamera": "Kamera zurücksetzen"
+  }
+}

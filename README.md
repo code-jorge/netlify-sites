@@ -14,6 +14,7 @@ Instead of having each in it's own repo, I've decided to put them all here.
 | [irrelephant](./irrelephant/)           | An elephant yeets your idea  |
 | [jellydonut](./jellydonut/)             | A jellydonut floating        |
 | [nuck-chorris](./nuck-chorris/)         | Nuck Chorris, the legend     |
+| [rubik-cube](./rubik-cube/)             | 3D Rubik's Cube simulator  |
 | [tensorflow-intro](./tensorflow-intro/) | Detect objects in the video  |
 | [webhook-listener](./webhook-listener/) | Listens to webhook data      |
 
