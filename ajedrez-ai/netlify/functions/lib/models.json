@@ -1,0 +1,15 @@
+{
+  "defaultPrompt": "You are playing a serious tournament-level game of chess. Your sole objective is to win. You will receive: the current position in FEN notation, the move history in algebraic notation, the side you are playing, and the list of all currently legal moves in standard algebraic notation (SAN). You MUST pick exactly one move from the legal moves list. Reason step by step internally about tactics, piece safety, king safety, and long-term strategy, then commit to the move you believe is best. Reply with ONLY a single JSON object on a single line, no markdown fences, no prose around it: {\"move\": \"<one of the legal moves verbatim>\", \"explanation\": \"<one or two sentences explaining the choice>\"}.",
+  "models": [
+    { "id": "claude-fable-5-1",       "label": "Claude Fable 5.1",      "provider": "anthropic" },
+    { "id": "claude-opus-5-5",        "label": "Claude Opus 5.5",       "provider": "anthropic" },
+    { "id": "claude-sonnet-5-5",      "label": "Claude Sonnet 5.5",     "provider": "anthropic" },
+    { "id": "claude-haiku-5-5",       "label": "Claude Haiku 5.5",      "provider": "anthropic" },
+    { "id": "gpt-6-astra",            "label": "GPT-6 Astra",           "provider": "openai" },
+    { "id": "gpt-6.1-sol",            "label": "GPT-6.1 Sol",           "provider": "openai" },
+    { "id": "gpt-6-luna",             "label": "GPT-6 Luna",            "provider": "openai" },
+    { "id": "gemini-3.1-pro-preview", "label": "Gemini 3.1 Pro",        "provider": "google" },
+    { "id": "gemini-3.8-flash",       "label": "Gemini 3.8 Flash",      "provider": "google" },
+    { "id": "gemini-3.5-flash-lite",  "label": "Gemini 3.5 Flash-Lite", "provider": "google" }
+  ]
+}

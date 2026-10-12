@@ -1,0 +1,89 @@
+.modelSelect {
+  position: relative;
+  margin-top: 6px;
+}
+
+.modelSelectTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 100ms;
+}
+
+.modelSelectTrigger:hover {
+  border-color: var(--muted);
+}
+
+.modelSelectTrigger[aria-expanded="true"] {
+  border-color: var(--accent);
+}
+
+.modelSelectLabel {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modelSelectCaret {
+  color: var(--muted);
+  font-size: 12px;
+  transition: transform 120ms;
+}
+
+.modelSelectTrigger[aria-expanded="true"] .modelSelectCaret {
+  transform: rotate(180deg);
+}
+
+.modelSelectOptions {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 4px;
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  z-index: 30;
+  max-height: 320px;
+  overflow-y: auto;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.modelSelectOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.modelSelectOption:hover {
+  background: var(--surface);
+}
+
+.modelSelectOption.selected {
+  background: rgba(94, 161, 255, 0.12);
+}
+
+.modelSelectCheck {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+}

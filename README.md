@@ -33,6 +33,7 @@ These sites use specific **Netlify** features.
 | [sleepy-cat](./sleepy-cat/)           | Sleeping cats         | `Images`                                                                |
 | [subscribe](./subscribe/)             | Subscribe from        | `Forms`                                                                 |
 | [daily-facts](./daily-facts/)         | Daily facts with AI   | `Forms`, `Images`, `Functions`, `Edge Functions`, `Blobs`, `AI Gateway` |
+| [ajedrez-ai](./ajedrez-ai/)           | AI vs AI chess        | `AI Gateway`, `Database` & `Functions`                                  |
 
 ### Netlify extensions
 

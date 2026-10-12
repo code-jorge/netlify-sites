@@ -1,0 +1,499 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.error {
+  background: rgba(255, 107, 107, 0.12);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  color: var(--danger);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.vs {
+  color: var(--muted);
+  font-weight: 400;
+  margin: 0 4px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.pill.illegal {
+  background: rgba(255, 182, 72, 0.12);
+  border-color: rgba(255, 182, 72, 0.4);
+  color: var(--warning);
+}
+
+.statusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+
+.statusInProgress {
+  background: rgba(94, 161, 255, 0.12);
+  border-color: rgba(94, 161, 255, 0.4);
+  color: var(--accent);
+}
+
+.statusWhiteWon,
+.statusBlackWon {
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.4);
+  color: var(--good);
+}
+
+.statusDraw {
+  background: rgba(139, 145, 161, 0.12);
+}
+
+.statusAbandoned {
+  background: rgba(255, 107, 107, 0.12);
+  border-color: rgba(255, 107, 107, 0.4);
+  color: var(--danger);
+}
+
+.gameView {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.gameView > .card {
+  margin-bottom: 0;
+}
+
+.boardCard,
+.historyCard {
+  max-height: 48rem;
+  overflow: hidden;
+}
+
+.historyCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.historyCard > .moves {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 960px) {
+  .gameView {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "board history"
+      "prompts prompts";
+    align-items: start;
+  }
+  .gameView > .boardCard {
+    grid-area: board;
+  }
+  .gameView > .historyCard {
+    grid-area: history;
+  }
+  .gameView > .promptsCard {
+    grid-area: prompts;
+  }
+}
+
+.matchup {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.sidePair {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.sidePillWhite {
+  background: #f5f5f5;
+  color: #0f1115;
+  border: 1px solid #f5f5f5;
+}
+
+.sidePillBlack {
+  background: #1a1d24;
+  color: #f5f5f5;
+  border: 1px solid var(--border);
+}
+
+.boardWrap {
+  position: relative;
+  max-width: 480px;
+  margin: 8px auto;
+}
+
+.thinkingOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 17, 21, 0.65);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 8px;
+  z-index: 5;
+  pointer-events: none;
+  animation: overlay-fade-in 200ms ease-out;
+}
+
+@keyframes overlay-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.thinkingPieces {
+  display: flex;
+  gap: 18px;
+  font-family: "Segoe UI Symbol", "Apple Symbols", "Arial Unicode MS",
+    system-ui, sans-serif;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.thinkingPiece {
+  display: inline-block;
+  animation: thinking-bounce 0.9s cubic-bezier(0.4, 0, 0.4, 1) infinite;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tp1 { color: #f5f5f5; animation-delay: 0s;    }
+.tp2 { color: #5ea1ff; animation-delay: 0.12s; }
+.tp3 { color: #cc785c; animation-delay: 0.24s; }
+.tp4 { color: #4ade80; animation-delay: 0.36s; }
+
+@keyframes thinking-bounce {
+  0%, 100% { transform: translateY(0)    rotate(0deg);  }
+  40%      { transform: translateY(-16px) rotate(-6deg); }
+  60%      { transform: translateY(-16px) rotate(6deg);  }
+}
+
+.thinkingActor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #e6e8ee;
+  background: rgba(15, 17, 21, 0.6);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.thinkingLabel {
+  color: #e6e8ee;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+  min-height: 1.4em;
+  text-align: center;
+  padding: 0 16px;
+  max-width: 100%;
+  animation: phrase-fade 240ms ease-out;
+}
+
+@keyframes phrase-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.navRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.navBtn {
+  width: 36px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 14px;
+}
+
+.playRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.playRow .primary {
+  margin-top: 0;
+}
+
+.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0a1220;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.observingLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 4px 0;
+  flex-wrap: wrap;
+}
+
+.observingTag {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.observingDivider {
+  color: var(--border);
+}
+
+.observingMove {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.observingBy {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 2px;
+}
+
+.pieceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Segoe UI Symbol", "Apple Symbols", "Arial Unicode MS",
+    system-ui, sans-serif;
+}
+
+.pieceIconWhite {
+  background: #f5f5f5;
+  color: #0f1115;
+}
+
+.pieceIconBlack {
+  background: #1a1d24;
+  color: #f5f5f5;
+  border: 1px solid var(--border);
+}
+
+.moves {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.moves li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.moves li:last-child {
+  border-bottom: none;
+}
+
+.move {
+  padding: 0 !important;
+}
+
+.moveLink {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+}
+
+.moveLink:hover {
+  background: var(--surface-2);
+}
+
+.move.current > .moveLink {
+  background: rgba(94, 161, 255, 0.14);
+  border-left: 3px solid var(--accent);
+  padding-left: 9px;
+}
+
+.move.current .san {
+  color: var(--accent);
+}
+
+.moveHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.moveHead .san {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.moveLabel {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.plyNum {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  min-width: 24px;
+  display: inline-block;
+}
+
+.explanation {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.illegalDetails {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.illegalDetails summary {
+  cursor: pointer;
+  color: var(--warning);
+}
+
+.illegalDetails ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.illegalDetails code {
+  background: var(--surface-2);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 720px) {
+  .settingsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.settingsSide {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.settingsSideHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.settingsPromptLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.settingsPromptText {
+  margin: 0;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
